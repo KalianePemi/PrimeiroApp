@@ -24,6 +24,9 @@
         <Entry x:Name="txtNome" Placeholder="" />
         <Button x:Name="btnVerificar" Text="Verificar" Clicked="btnVerificar_Clicked" />
         <Button x:Name="btnLimpar" Text="Limpar" Clicked="btnLimpar_Clicked" />
+        <Entry x:Name="txtData" Placeholder="Digite aqui a data aaaa/mm/dd"  />
+        <Button x:Name="btnAdicionarDias" Text="Adicionar dez dias" Clicked="btnAdicionarDias_Clicked" />
+        <Button x:Name="btnAdicionarMeses" Text="Adicionar dez Meses" Clicked="btnAdicionarDias_Clicked" />
     </StackLayout>
 
 </ContentPage>

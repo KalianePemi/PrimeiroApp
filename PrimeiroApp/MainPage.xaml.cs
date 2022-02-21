@@ -16,7 +16,6 @@ namespace PrimeiroApp
         }
         
         int count = 0;
-        
 
         private void Button_Clicked(object sender, EventArgs e)
         {
@@ -36,6 +35,26 @@ namespace PrimeiroApp
                 txtNome.Text = string.Empty;
                 btnCliqueAqui.Text = "Clique aqui";
             }
+        }
+
+        private void btnAdicionarDias_Clicked(object sender, EventArgs e)
+        {
+            DateTime dataDigitada = Convert.ToDateTime(txtData.Text);
+            DateTime dataFutura = dataDigitada.AddDays(10);
+            DisplayAlert("Mensagem", "A data futura é " + dataFutura.Date, "ok");
+        }
+
+        private async void btnAdicionarMeses_ClickedAsync(object sender, EventArgs e)
+        {
+
+            if (await DisplayAlert("Mensagem", "Deseja realmente somar os meses?", "yes", "no"))
+            {
+                DateTime dataDigitada = Convert.ToDateTime(txtData.Text);
+                DateTime dataFutura = dataDigitada.AddMonths(10);
+                await DisplayAlert("Mensagem", "A data futura é " + dataFutura.Date, "ok");
+            }
+
+
         }
     }
 }
